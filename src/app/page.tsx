@@ -32,7 +32,7 @@ export default function Home() {
         queryParams.append("end_date", localToUTC(filters.end_date));
 
       const response = await fetch(
-        `https://fetch-esp-32-data.ramesh-shanilka.workers.dev?${queryParams.toString()}`
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}?${queryParams.toString()}`
       );
       const result: DataEntry[] = await response.json();
 
