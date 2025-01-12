@@ -19,11 +19,11 @@ interface GraphProps {
 
 const Graph: FC<GraphProps> = ({ title, labels, data, yAxisLabel }) => {
   const chartData = {
-    labels, // X-axis: timestamps
+    labels,
     datasets: [
       {
         label: yAxisLabel,
-        data, // Y-axis: data for the metric
+        data,
         borderColor: "rgba(75, 192, 192, 1)",
         backgroundColor: "rgba(75, 192, 192, 0.2)",
         borderWidth: 2,
@@ -56,7 +56,7 @@ const Graph: FC<GraphProps> = ({ title, labels, data, yAxisLabel }) => {
   };
 
   return (
-    <div>
+    <div className="max-w-[1024px]">
       <h3>{title}</h3>
       <Line data={chartData} options={options} />
     </div>
