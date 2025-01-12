@@ -1,3 +1,4 @@
+"use client";
 import Graph from "@/components/Graph";
 import { useEffect, useState } from "react";
 interface DataEntry {
