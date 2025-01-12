@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
   req: NextApiRequest,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   env: any,
   res: NextApiResponse
 ) {
